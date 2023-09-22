@@ -9,8 +9,11 @@ import base.Base;
 public class LoginTest extends Base {
 	
 	 @Test
-	    public void validLoginTest() {
+
+	    public void validLoginTest() throws InterruptedException {
 		 	var loginPage = loginpage.login("admin", "admin123");
+		 	loginPage.clickPIM();
+
 	        
 	    }
 
