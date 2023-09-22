@@ -3,12 +3,16 @@ package base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.LoginPage;
 import utility.EventReporter;
+
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.time.Duration;
+
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +26,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 
 /**
  * Base class that sets up and tears down the testing environment.
@@ -38,6 +43,7 @@ public class Base {
      * 
      * @param browserName Name of the browser to initialize ("chrome", "firefox", etc.).
      */
+
     public static void initializeBrowser(String browserName) {
         try {
             if (browserName.equalsIgnoreCase("chrome")) {
@@ -60,9 +66,11 @@ public class Base {
         }
     }
 
+
     /**
      * Initializes the WebDriverWait instance with a fixed timeout.
      */
+
     public static void initializeWaits() {
         try {
             wait = new WebDriverWait(driver, Duration.ofSeconds(20));  // waits up to 20 seconds
@@ -71,14 +79,18 @@ public class Base {
         }
     }
 
+
     /**
      * Set up method to be run before the entire test suite.
      * Initializes the browser, sets the WebDriverWait, and navigates to the login page.
      */
+
+
     @BeforeSuite
     public void setUp() {
         initializeBrowser("chrome");  // can use external config to manage browser type
         initializeWaits();
+
 
         loginpage = new LoginPage(driver, wait);
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -92,6 +104,8 @@ public class Base {
     public void tearDown() {
         if (driver != null) {
             driver.quit(); //closing the browser
+
+ 
         }
     }
     
@@ -118,4 +132,5 @@ public class Base {
             }
         }
     }
+
 }

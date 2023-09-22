@@ -1,5 +1,6 @@
 package pages;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.NoSuchElementException;
@@ -79,4 +80,5 @@ public class DashboardPage {
 		clickLink(timeLinkLocator);
 		return new TimePage(driver, wait);
 	}
+
 }
