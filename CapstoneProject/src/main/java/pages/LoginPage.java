@@ -14,6 +14,7 @@ public class LoginPage {
 	private By loginButton = By.xpath("//button[@type='submit']");
 
 	
+	//Login page Constructor
 	public LoginPage(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
 		this.wait=wait;
