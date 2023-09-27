@@ -8,6 +8,8 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
+
 /**
  * Represents the dashboard page of the application.
  * Provides methods to interact with dashboard elements and navigate to other sections of the application.
@@ -16,6 +18,7 @@ public class DashboardPage {
 	
 	private WebDriver driver;  // WebDriver instance for the page
 	private WebDriverWait wait;  // WebDriverWait instance for explicit waits on this page
+	
 	
 	private By pimLinkLocator = By.xpath("//span[.='PIM']");  // Locator for the PIM link
 	private By leaveLinkLocator = By.xpath("//span[.='Leave']");  // Locator for the Leave link
