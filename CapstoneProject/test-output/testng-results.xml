@@ -1,36 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-22T22:31:03 AEST" name="Default suite" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
+  <suite started-at="2023-09-27T19:02:02 IST" name="Default suite" finished-at="2023-09-27T19:02:38 IST" duration-ms="35517">
     <groups>
     </groups>
-    <test started-at="2023-09-22T22:31:03 AEST" name="Default test" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
-      <class name="loginTest.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:30:41 AEST" name="setUp" finished-at="2023-09-22T22:31:03 AEST" duration-ms="21416" status="PASS">
+    <test started-at="2023-09-27T19:02:02 IST" name="Default test" finished-at="2023-09-27T19:02:38 IST" duration-ms="35517">
+      <class name="leaveTests.VaildLeave">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:01:49 IST" name="setUp" finished-at="2023-09-27T19:02:02 IST" duration-ms="13055" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:03 AEST" name="validLoginTest" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1494" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="takeScreenshot" finished-at="2023-09-22T22:31:04 AEST" duration-ms="3" status="PASS">
+        <test-method signature="loginvalid(java.util.Hashtable)[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:02:04 IST" name="loginvalid" data-provider="getdata" finished-at="2023-09-27T19:02:13 IST" duration-ms="9336" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557] output={null}]]]>
+                <![CDATA[{Password=admin123, UserName=Admin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginvalid -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:02:13 IST" name="takeScreenshot" finished-at="2023-09-27T19:02:13 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginvalid status=SUCCESS method=VaildLeave.loginvalid(java.util.Hashtable)[pri:0, instance:leaveTests.VaildLeave@15a34df2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="tearDown" finished-at="2023-09-22T22:31:04 AEST" duration-ms="0" status="PASS">
+        <test-method signature="testAdminAllocateLeaveForMultipleEmployees()[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:02:13 IST" name="testAdminAllocateLeaveForMultipleEmployees" finished-at="2023-09-27T19:02:37 IST" depends-on-methods="leaveTests.VaildLeave.loginvalid" duration-ms="23654" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@role='listbox']//span (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@role='listbox']//span (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utility.CommanUtilty.listData(CommanUtilty.java:21)
+at pages.LeavePage.addEntitlementsForMultipleEmployees(LeavePage.java:87)
+at leaveTests.VaildLeave.testAdminAllocateLeaveForMultipleEmployees(VaildLeave.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.92)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a174af84d9410cc730c00b2d2e569d9, findElement {using=xpath, value=//div[@role='listbox']//span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\u1251792\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50399/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a174af84d9410cc730c00b2d2e569d9
+at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdminAllocateLeaveForMultipleEmployees -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:02:37 IST" name="takeScreenshot" finished-at="2023-09-27T19:02:38 IST" duration-ms="433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAdminAllocateLeaveForMultipleEmployees status=FAILURE method=VaildLeave.testAdminAllocateLeaveForMultipleEmployees()[pri:0, instance:leaveTests.VaildLeave@15a34df2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:leaveTests.VaildLeave@15a34df2]" started-at="2023-09-27T19:02:38 IST" name="tearDown" finished-at="2023-09-27T19:02:39 IST" duration-ms="995" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- loginTest.LoginTest -->
+      </class> <!-- leaveTests.VaildLeave -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
