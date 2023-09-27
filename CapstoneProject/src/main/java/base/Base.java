@@ -2,16 +2,18 @@ package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.LoginPage;
+import utility.ExcelUtils;
 import utility.EventReporter;
 
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.time.Duration;
-
+import java.util.HashMap;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,6 +28,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 
 /**
@@ -37,7 +40,13 @@ public class Base {
     public static WebDriver driver;  // The main WebDriver instance for the test suite.
     public static WebDriverWait wait;  // WebDriverWait instance for waiting for elements.
     protected LoginPage loginpage;  // LoginPage object to perform login operations.
-
+    public String testcaseName = null;
+   	public String shortTestName = null;
+   	public Object[][] localData = null;
+   	public String path;
+   	
+   	private String sheet;
+   	HashMap<String, String> expectedCommonValidationdata = new HashMap<String, String>();
     /**
      * Initializes the WebDriver based on the given browser name.
      * 
@@ -95,6 +104,23 @@ public class Base {
         loginpage = new LoginPage(driver, wait);
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
+    
+    
+    @DataProvider(name="getdata") // parallel=true
+   	public Object[][] getData(Method method) {
+   		path="Resources\\TestData\\OrangeHRM_TestCases.xlsx";
+   		sheet="Valid";
+   			System.out.println("Test Case method Name :" + method.getName());
+   			testcaseName = method.getName();
+   			try {
+   				localData = ExcelUtils.getData(path,sheet,testcaseName);
+   			} catch (Exception e) {
+   				// TODO Auto-generated catch block
+   				e.printStackTrace();
+   			}			
+
+   		return localData;
+   	}
 
     /**
      * Clean-up method to be run after the entire test suite.
