@@ -18,6 +18,7 @@ public class LoginPage {
 	private By usernameField = By.xpath("//input[@name='username']");  // Locator for the username input field
 	private By passwordField = By.xpath("//input[@name='password']");  // Locator for the password input field
 	private By loginButton = By.xpath("//button[@type='submit']");  // Locator for the login button
+	
 
 	/**
 	 * Constructs a new LoginPage object.
@@ -58,4 +59,6 @@ public class LoginPage {
 		// Return null if there was an exception
 		return null;
 	}
+	
+	
 }
