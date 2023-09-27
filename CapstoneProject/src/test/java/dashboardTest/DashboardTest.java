@@ -59,6 +59,8 @@ public class DashboardTest extends Base {
     
     @Test
     public void testTimeatWork() {
+    	dashboard.clickProfile();
+    	
     	Assert.assertEquals(dashboard.getTimeAtWorkTitle(), "Time at Work", "Widget title is incorrect.");
     }
     

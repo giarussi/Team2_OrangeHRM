@@ -30,6 +30,8 @@ public class DashboardPage {
 	private By claimLinkLocator = By.xpath("//span[.='Claim']");
 	private By timeAtWorkWidget = By.cssSelector(".orangehrm-dashboard-widget[data-v-fcab0262]");
 	private By timeAtWorkWidgettitle = By.cssSelector(".oxd-text--p[data-v-fcab0262]");
+	private By profileDropdown = By.cssSelector(".oxd-icon.bi-caret-down-fill.oxd-userdropdown-icon");
+
 	
 
 	
@@ -260,6 +262,11 @@ public class DashboardPage {
 	
 	public String getTimeAtWorkTitle() {
 		return driver.findElement(timeAtWorkWidgettitle).getText();
+	}
+	
+	public void clickProfile() {
+		clickLink(profileDropdown);
+		
 	}
 
 

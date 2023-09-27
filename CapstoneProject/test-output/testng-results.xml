@@ -1,36 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-22T22:31:03 AEST" name="Default suite" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
+  <suite started-at="2023-09-27T03:22:30 AEST" name="Default suite" finished-at="2023-09-27T03:22:32 AEST" duration-ms="1157">
     <groups>
     </groups>
-    <test started-at="2023-09-22T22:31:03 AEST" name="Default test" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
-      <class name="loginTest.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:30:41 AEST" name="setUp" finished-at="2023-09-22T22:31:03 AEST" duration-ms="21416" status="PASS">
+    <test started-at="2023-09-27T03:22:30 AEST" name="Default test" finished-at="2023-09-27T03:22:32 AEST" duration-ms="1157">
+      <class name="dashboardTest.DashboardTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:13 AEST" name="setUp" finished-at="2023-09-27T03:22:27 AEST" duration-ms="14751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:03 AEST" name="validLoginTest" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1494" status="PASS">
+        <test-method is-config="true" signature="setUpDashboard()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:27 AEST" name="setUpDashboard" finished-at="2023-09-27T03:22:30 AEST" depends-on-methods="base.Base.setUp" duration-ms="2896" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="takeScreenshot" finished-at="2023-09-22T22:31:04 AEST" duration-ms="3" status="PASS">
+        </test-method> <!-- setUpDashboard -->
+        <test-method signature="testAdminLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:30 AEST" name="testAdminLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdminLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557] output={null}]]]>
+                <![CDATA[[TestResult name=testAdminLinkPresence status=SUCCESS method=DashboardTest.testAdminLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="tearDown" finished-at="2023-09-22T22:31:04 AEST" duration-ms="0" status="PASS">
+        <test-method signature="testClaimLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testClaimLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClaimLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testClaimLinkPresence status=SUCCESS method=DashboardTest.testClaimLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testDirectoryLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testDirectoryLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDirectoryLinkPresence -->
+        <test-method signature="testMaintenanceLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testMaintenanceLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMaintenanceLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDirectoryLinkPresence status=SUCCESS method=DashboardTest.testDirectoryLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMaintenanceLinkPresence status=SUCCESS method=DashboardTest.testMaintenanceLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testMyInfoLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testMyInfoLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMyInfoLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMyInfoLinkPresence status=SUCCESS method=DashboardTest.testMyInfoLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testPerformanceLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testPerformanceLinkPresence" finished-at="2023-09-27T03:22:31 AEST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPerformanceLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:31 AEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPerformanceLinkPresence status=SUCCESS method=DashboardTest.testPerformanceLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testRecruitmentLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:31 AEST" name="testRecruitmentLinkPresence" finished-at="2023-09-27T03:22:32 AEST" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecruitmentLinkPresence -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:32 AEST" name="takeScreenshot" finished-at="2023-09-27T03:22:32 AEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRecruitmentLinkPresence status=SUCCESS method=DashboardTest.testRecruitmentLinkPresence()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dashboardTest.DashboardTest@52bf72b5]" started-at="2023-09-27T03:22:32 AEST" name="tearDown" finished-at="2023-09-27T03:22:33 AEST" duration-ms="1235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- loginTest.LoginTest -->
+      </class> <!-- dashboardTest.DashboardTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
