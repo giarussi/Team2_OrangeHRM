@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="loginTest.LoginTest">
+      <class name="leaveTests.VaildLeave">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="validLoginTest"/>
+          <include name="loginvalid"/>
           <include name="takeScreenshot"/>
+          <include name="testAdminAllocateLeaveForMultipleEmployees"/>
         </methods>
-      </class> <!-- loginTest.LoginTest -->
+      </class> <!-- leaveTests.VaildLeave -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
