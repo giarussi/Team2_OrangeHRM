@@ -23,6 +23,11 @@
 hs_err_pid*
 replay_pid*
 
+# Ignore Folders #
+/ExtentReports/
+/test-output/
+/Reports/
+/Resources/
 /target/
 # Ignore Folders #
 /ExtentReports/
