@@ -5,6 +5,7 @@
     <classes>
       <class name="base.Base"/>
       <class name="loginTest.LoginTest"/>
+      <class name="timesheetTest.TimesheetTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

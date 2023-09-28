@@ -2,35 +2,39 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-22T22:31:03 AEST" name="Default suite" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
+  <suite started-at="2023-09-28T16:46:23 IST" name="Default suite" finished-at="2023-09-28T16:46:29 IST" duration-ms="5504">
     <groups>
     </groups>
-    <test started-at="2023-09-22T22:31:03 AEST" name="Default test" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1548">
-      <class name="loginTest.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:30:41 AEST" name="setUp" finished-at="2023-09-22T22:31:03 AEST" duration-ms="21416" status="PASS">
+    <test started-at="2023-09-28T16:46:23 IST" name="Default test" finished-at="2023-09-28T16:46:29 IST" duration-ms="5504">
+      <class name="timesheetTest.TimesheetTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:timesheetTest.TimesheetTest@48075da3]" started-at="2023-09-28T16:46:09 IST" name="setUp" finished-at="2023-09-28T16:46:19 IST" duration-ms="9875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:03 AEST" name="validLoginTest" finished-at="2023-09-22T22:31:04 AEST" duration-ms="1494" status="PASS">
+        <test-method is-config="true" signature="loginSetup()[pri:0, instance:timesheetTest.TimesheetTest@48075da3]" started-at="2023-09-28T16:46:19 IST" name="loginSetup" finished-at="2023-09-28T16:46:23 IST" depends-on-methods="base.Base.setUp" duration-ms="4349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="takeScreenshot" finished-at="2023-09-22T22:31:04 AEST" duration-ms="3" status="PASS">
+        </test-method> <!-- loginSetup -->
+        <test-method signature="testEmployeeToCreateTimesheet()[pri:0, instance:timesheetTest.TimesheetTest@48075da3]" started-at="2023-09-28T16:46:24 IST" name="testEmployeeToCreateTimesheet" finished-at="2023-09-28T16:46:29 IST" duration-ms="5448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmployeeToCreateTimesheet -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:timesheetTest.TimesheetTest@48075da3]" started-at="2023-09-28T16:46:29 IST" name="takeScreenshot" finished-at="2023-09-28T16:46:29 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest()[pri:0, instance:loginTest.LoginTest@54bff557] output={null}]]]>
+                <![CDATA[[TestResult name=testEmployeeToCreateTimesheet status=SUCCESS method=TimesheetTest.testEmployeeToCreateTimesheet()[pri:0, instance:timesheetTest.TimesheetTest@48075da3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginTest.LoginTest@54bff557]" started-at="2023-09-22T22:31:04 AEST" name="tearDown" finished-at="2023-09-22T22:31:04 AEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:timesheetTest.TimesheetTest@48075da3]" started-at="2023-09-28T16:46:29 IST" name="tearDown" finished-at="2023-09-28T16:46:29 IST" duration-ms="456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- loginTest.LoginTest -->
+      </class> <!-- timesheetTest.TimesheetTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
